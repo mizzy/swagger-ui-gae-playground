@@ -479,7 +479,21 @@ paths:
               description: "date in UTC when token expires"
         400:
           description: "Invalid username/password supplied"
-  /user/logoutttttt:
+  /user/logout:
+    get:
+      tags:
+      - "user"
+      summary: "Logs out current logged in user session"
+      description: ""
+      operationId: "logoutUser"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        default:
+          description: "successful operation"
+  /user/foo:
     get:
       tags:
       - "user"
