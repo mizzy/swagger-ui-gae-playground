@@ -8,10 +8,10 @@ jobs:
     machine: true
     steps:
       - checkout
-      - curl -sLO https://github.com/swagger-api/swagger-ui/archive/v3.23.3.tar.gz
-      - tar zxvf v3.23.3.tar.gz
-      - cp -r v3.23.2/dist/* swagger-ui
-      - mkdir swagger-ui/api-docs
-      - cp swagger.yaml swagger-ui/api-docs
+      - run: curl -sLO https://github.com/swagger-api/swagger-ui/archive/v3.23.3.tar.gz
+      - run: tar zxvf v3.23.3.tar.gz
+      - run: cp -r v3.23.2/dist/* swagger-ui
+      - run: mkdir swagger-ui/api-docs
+      - run: cp swagger.yaml swagger-ui/api-docs
       - gcp-cli/initialize
       - run: gcloud app deploy swagger-ui/app.yaml
