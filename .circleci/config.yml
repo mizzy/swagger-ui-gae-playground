@@ -1,12 +1,12 @@
 version: 2.1
 
 orbs:
-  gcp-cli: circleci/gcp-cli@1.8.2
+  gcp-cli: circleci/gcp-cli@1.0.1
 
 jobs:
   build:
     docker:
-      - image: google/cloud-sdk:latest
+      - image: google/cloud-sdk:247.0.0-alpine
     steps:
       - checkout
       - gcp-cli/install_and_initialize_cli
