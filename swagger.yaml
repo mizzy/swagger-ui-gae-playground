@@ -479,7 +479,7 @@ paths:
               description: "date in UTC when token expires"
         400:
           description: "Invalid username/password supplied"
-  /user/logout:
+  /user/logoutttttt:
     get:
       tags:
       - "user"
