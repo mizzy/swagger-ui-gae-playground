@@ -13,7 +13,7 @@ jobs:
       - run: curl -sLO https://github.com/swagger-api/swagger-ui/archive/v3.23.3.tar.gz
       - run: tar zxf v3.23.3.tar.gz
       - run: cp -r swagger-ui-3.23.3/dist/* swagger-ui
-      - run: sed -ie 's|https://petstore.swagger.io/v2/swagger.json|/api-docs/swagger.yaml|' swagger-ui-3.23.3/dist/index.html
+      - run: sed -ie 's|https://petstore.swagger.io/v2/swagger.json|/api-docs/swagger.yaml|' swagger-ui/index.html
       - run: mkdir swagger-ui/api-docs
       - run: cp swagger.yaml swagger-ui/api-docs
       - run: gcloud app deploy swagger-ui/app.yaml
