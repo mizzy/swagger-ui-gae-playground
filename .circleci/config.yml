@@ -9,7 +9,7 @@ jobs:
       - image: google/cloud-sdk:247.0.0-alpine
     steps:
       - checkout
-      - gcp-cli/install_and_initialize_cli
+      - gcp-cli/initialize
       - run: curl -sLO https://github.com/swagger-api/swagger-ui/archive/v3.23.3.tar.gz
       - run: tar zxf v3.23.3.tar.gz
       - run: cp -r swagger-ui-3.23.3/dist/* swagger-ui
