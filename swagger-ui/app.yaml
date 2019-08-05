@@ -1,5 +1,4 @@
-runtime: go
-api_version: go1
+runtime: go111
 
 handlers:
 - url: /
@@ -21,4 +20,4 @@ handlers:
   static_files: api-docs/swagger.yaml
   upload: api-docs/swagger.yaml
 - url: /.*
-  script: _go_app
+  script: auto
